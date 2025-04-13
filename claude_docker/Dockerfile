@@ -15,8 +15,10 @@ FROM jeportie/claude_base:latest
 
 # Set the entrypoint to launch the customized shell ************************** #
 COPY script/entrypoint.sh /sh/entrypoint.sh
-COPY script/run_claude.sh /sh/run_claude.sh
 RUN chmod +x /sh/entrypoint.sh
+COPY script/run_claude.sh /sh/run_claude.sh
+RUN chmod +x /sh/run_claude.sh
+
 ENTRYPOINT ["/sh/entrypoint.sh"]
 RUN git config --global user.email "jeportie@student.42.fr"
 RUN git config --global user.name "jeportie"

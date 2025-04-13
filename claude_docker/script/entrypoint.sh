@@ -84,8 +84,8 @@ else
 fi
 
 # Launch zsh.
-exec zsh
+#exec zsh
 
 # Run claude
 cd project/
-zsh /sh/run_claude.sh
+bash /sh/run_claude.sh
