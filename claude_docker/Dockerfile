@@ -6,7 +6,7 @@
 #    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/12 12:58:41 by jeportie          #+#    #+#              #
-#    Updated: 2025/04/04 01:32:44 by JeromeP          ###   ########.fr        #
+#    Updated: 2025/04/13 19:04:35 by jeportie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,3 @@ COPY claude_code/just-prompt-mcp.json /root/projects/just-prompt-mcp.json
 # COPY claude_code/just-prompt/ /root/projects/just-prompt
 RUN git clone https://github.com/disler/just-prompt.git /root/projects/just-prompt
 RUN cd /root/projects/just-prompt && pip install -e . && cd /root/projects/
-
-# COPY zsh
-COPY config/nvjej.zshrc /root/.zshrc
