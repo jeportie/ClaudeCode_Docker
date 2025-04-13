@@ -85,3 +85,6 @@ fi
 
 # Launch zsh.
 exec zsh
+
+# Run claude
+claude "say hi"
