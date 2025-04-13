@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "just-prompt": {
+      "type": "stdio",
+      "command": "python",
+      "args": [
+        "-m",
+        "just_prompt"
+      ],
+      "env": {}
+    }
+  }
+}

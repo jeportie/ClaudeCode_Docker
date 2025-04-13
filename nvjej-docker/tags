@@ -1,0 +1,29 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+["`"] 	lua/cmp.lua	/^    ["`"] = cmp.mapping(function(fallback)$/;"	f
+["~"] 	lua/cmp.lua	/^    ["~"] = cmp.mapping(function(fallback)$/;"	f
+callback 	lua/lazy.lua	/^				callback = function()$/;"	f
+callback 	lua/mappings.lua	/^  callback = function()$/;"	f
+config 	lua/lazy.lua	/^		config = function()$/;"	f
+config 	lua/lazy.lua	/^		config = function(_, opts)$/;"	f
+custom_tools 	lua/lazy.lua	/^			custom_tools = function()$/;"	f
+dap.listeners.after["event_initialized"]["dapui_config"] 	lua/lazy.lua	/^			dap.listeners.after["event_initialized"]["dapui_config"] = function()$/;"	f
+dap.listeners.before["event_exited"]["dapui_config"] 	lua/lazy.lua	/^			dap.listeners.before["event_exited"]["dapui_config"] = function()$/;"	f
+dap.listeners.before["event_terminated"]["dapui_config"] 	lua/lazy.lua	/^			dap.listeners.before["event_terminated"]["dapui_config"] = function()$/;"	f
+expand 	lua/cmp.lua	/^    expand = function(args)$/;"	f
+generate_src_list	script/update_makefile.sh	/^generate_src_list() {$/;"	f
+nvjej	script/install_alias.sh	/^nvjej() {$/;"	f
+on_attach 	lua/lspconfig.lua	/^  on_attach = function(client, bufnr)$/;"	f
+on_error 	lua/lazy.lua	/^				on_error = function(err)$/;"	f
+on_ready 	lua/lazy.lua	/^				on_ready = function(hub)$/;"	f
+opts 	lua/lazy.lua	/^		opts = function()$/;"	f
+opts 	lua/lazy.lua	/^		opts = function(_, opts)$/;"	f
+sepcat	script/install_alias.sh	/^sepcat() {$/;"	f
+show_progress	script/entrypoint.sh	/^show_progress() {$/;"	f
+system_prompt 	lua/lazy.lua	/^			system_prompt = function()$/;"	f
+txt 	lua/chadrc.lua	/^        txt = function()$/;"	f
+{ "<C-t>", function() require("menu").open("default") end, desc 	lua/lazy.lua	/^			{ "<C-t>", function() require("menu").open("default") end, desc = "Open menu (keyboard)" },$/;"	f
