@@ -1,7 +1,7 @@
 #!/bin/bash
 
 touch ~/.cache/docker_nv_reset.flag
-docker build -t jeportie/nvjej:latest .
+docker build -t jeportie/claude_docker:latest .
 
 # Check for AI API keys file
 API_KEYS_FILE=~/ai_api_keys.conf
@@ -16,3 +16,5 @@ if [ ! -f "$API_KEYS_FILE" ] || [ ! -s "$API_KEYS_FILE" ]; then
     done
     chmod 600 "$API_KEYS_FILE"
 fi
+
+./script/install_alias.sh

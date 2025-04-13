@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 # Base System Configuration ************************************************** #
-FROM jeportie/nvjej_base:latest
+FROM jeportie/claude_base:latest
 
 # Set the entrypoint to launch the customized shell ************************** #
 COPY script/entrypoint.sh /sh/entrypoint.sh
