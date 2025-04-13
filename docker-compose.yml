@@ -1,0 +1,21 @@
+services:
+  claude_base:
+    build:
+      context: ./claude_base
+      dockerfile: Dockerfile
+    image: jeportie/claude_base:latest
+
+  claude_docker:
+    build:
+      context: ./claude_docker
+      dockerfile: Dockerfile
+    image: jeportie/claude_docker:latest
+    depends_on:
+      - claude_base
+    volumes:
+      - ~/.ssh:/root/.ssh:ro
+      - ~/tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.zsh_history:/root/.zsh_history
+      - ~/ai_api_keys.conf:/etc/secrets/ai_api_keys.conf:ro
+    environment:
+      - DISPLAY
