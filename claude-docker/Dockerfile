@@ -29,30 +29,6 @@ COPY script/val_with_args.sh /sh/val_with_args.sh
 COPY script/load_api_keys.sh /sh/load_api_keys.sh
 RUN chmod +x /sh/load_api_keys.sh
 
-# Install the latest stable Neovim + NVChad Base Disrto ********************** #
-RUN wget https://github.com/neovim/neovim/releases/download/v0.10.4/nvim-linux-x86_64.tar.gz && \
-    tar -xzf nvim-linux-x86_64.tar.gz && \
-    cp -r nvim-linux-x86_64/* /usr/local/ && \
-    rm -rf nvim-linux-x86_64.tar.gz nvim-linux-x86_64
-RUN git clone https://github.com/NvChad/starter ~/.config/nvim && \
-    rm -rf ~/.config/nvim/.git
-
-# Trigger lazy.nvim to sync plugins in headless mode ************************* #
-RUN nvim --headless +"Lazy! sync" +qa
-# Copy lua config files ****************************************************** #
-COPY lua/chadrc.lua /root/.config/nvim/lua/chadrc.lua
-COPY lua/options.lua /root/.config/nvim/lua/options.lua
-COPY lua/cmp.lua /root/.local/share/nvim/lazy/NvChad/lua/nvchad/configs/cmp.lua
-COPY lua/lspconfig.lua /root/.config/nvim/lua/configs/lspconfig.lua
-COPY lua/lsp_servers.lua /root/.config/nvim/lua/custom/lsp_servers.lua
-COPY lua/lazy.lua /root/.config/nvim/lua/plugins/lazy.lua
-COPY lua/mappings.lua /root/.config/nvim/lua/custom/mappings.lua
-COPY lua/null-ls.lua /root/.config/nvim/lua/custom/configs/null-ls.lua
-COPY lua/mappings.lua /root/.local/share/nvim/lazy/NvChad/lua/nvchad/mappings.lua
-COPY lua/term_init.lua /root/.local/share/nvim/lazy/ui/lua/nvchad/term/init.lua
-# Trigger lazy.nvim to sync plugins in headless mode ************************* #
-RUN nvim --headless +"Lazy! sync" +qa
-
 # COPY mounted volumes to default
 RUN cp -r /root/.cache /root/.default.cache
 RUN cp -r /root/.config /root/.default.config
